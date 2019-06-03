@@ -5,12 +5,13 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {
-    var end=""
+    var player:String=""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
-        end=intent.getStringExtra(EXTRA_LEAGUE)
-        endview.text="We are finding details of "+end+" ..."
+        player=intent.getStringExtra(EXTRA_Player)
+        endview.text="We are finding details of $player ... "
     }
 }
